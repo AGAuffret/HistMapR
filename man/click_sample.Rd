@@ -9,7 +9,7 @@
   \item{cats}{A vector of the names of land-use categories of interest (string). }
   \item{npoints}{The number of times to sample each category. More points means more representative results, but generally the default is enough if you make sure that you sample the full range of colours for each category, provided points are well chosen. Default = 10.}
   \item{print.values}{Logical. Print the RGB values of each point as you go. Default = FALSE.}
-  \item{type}{Logical. From \code{\link{click}}. Do you want to plot the points on the image so you know where you've already clicked (and if you miss!). Default = TRUE.}
+  \item{type}{Logical. From \code{\link[raster]{click}}. Do you want to plot the points on the image so you know where you've already clicked (and if you miss!). Default = TRUE.}
   \item{plot.cols}{Logical. Produce the plot of max or min colours once sampling is finished. Requires packages \code{ggplot} and \code{gridExtra}. Default = TRUE.}
   \item{\dots}{additional parameters passed to \code{\link{plot_colour_table}}}
 }
