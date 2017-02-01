@@ -30,7 +30,7 @@
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-	data(HistMapRex.Rdata)
+	data(HistMapRex.RData)
 	class_map(in.raster=ras.smoothed, colour.table = col.table, errors = 5, exceptions = "Arable", plot.raster = TRUE, raster.summary = TRUE, save.raster = FALSE, out.file = NULL) 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

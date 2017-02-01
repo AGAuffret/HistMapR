@@ -25,7 +25,7 @@ plot_colour_table(colour.table, errors = 0)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-	data(HistMapRex.Rdata)
+	data(HistMapRex.RData)
 	plot_colour_table(col.table, errors = 1) }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

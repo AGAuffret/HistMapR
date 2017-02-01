@@ -28,7 +28,7 @@
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-	data(HistMapRex.Rdata)
+	data(HistMapRex.RData)
 	names(in.ras)<-c("red","green","blue")	
 	ras.smoothed<-smooth_map(in.raster=in.ras, window.size = 5, smooth.function = mean, dark.rm = TRUE, darkValue = 80, pad = TRUE, padValue = NA)
 	plotRGB(ras.smoothed)	
