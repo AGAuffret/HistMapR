@@ -33,7 +33,7 @@
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-	data(HistMapRex.RData)
+	data(HistMapRex)
 	click_sample(in.raster=ras.smoothed, cats = c("Arable", "Grassland", "Forest"), npoints = 3, print.values = FALSE, type = "p", plot.cols = TRUE)
 	 }
 
