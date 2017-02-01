@@ -34,7 +34,7 @@
 }
 \examples{
 	data(HistMapRex)
-	click_sample(in.raster=ras.smoothed, cats = c("Arable", "Grassland", "Forest"), npoints = 3, print.values = FALSE, type = "p", plot.cols = TRUE)
+	click_sample(in.raster=ras.smoothed, cats = c("Arable", "Open", "Forest"), npoints = 3, print.values = FALSE, type = "p", plot.cols = TRUE)
 	 }
 
 % Add one or more standard keywords, see file 'KEYWORDS' in the
