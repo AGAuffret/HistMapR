@@ -18,9 +18,7 @@
 }
 \value{Returns the reclassified raster. Values of raster cells in the output correspond to row numbers in the colour table input, i.e. the category represented by the first row will be 1, the second row 2 etc. Pixels that don't fit into any category (unless specified with 'exceptions') are given 0.
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
+\references{Auffret, A.G., Kimberley, A., et al., 2017, HistMapR: Rapid classification of historical maps in R, BiorXiv, doi: doidoidoidodoi, \href{http://alistairauffret.weebly.com/}{Link}. \href{https://github.com/AGAuffret/HistMapR/}{GitHub repository.}}
 \author{Alistair Auffret and Adam Kimberley}
 \note{
 %%  ~~further notes~~
@@ -32,8 +30,10 @@
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-\dontrun{raster_reclass(in.raster, colour.table = NULL, errors = 0, exceptions = NULL, plot.raster = TRUE, raster.summary = FALSE, save.raster = FALSE, out.file = NULL) 
-}}
+	data(ras.smoothed)
+	data(col.table)
+	raster_reclass(in.raster=ras.smoothed, colour.table = col.table, errors = 5, exceptions = "Arable", plot.raster = TRUE, raster.summary = TRUE, save.raster = FALSE, out.file = NULL) 
+}
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
 \keyword{ ~kwd1 }

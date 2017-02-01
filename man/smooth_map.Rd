@@ -16,9 +16,7 @@
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{A smoothed raster object}
-\references{
-%% ~put references to the literature/web site here ~
-}
+\references{Auffret, A.G., Kimberley, A., et al., 2017, HistMapR: Rapid classification of historical maps in R, BiorXiv, doi: doidoidoidodoi, \href{http://alistairauffret.weebly.com/}{Link}. \href{https://github.com/AGAuffret/HistMapR/}{GitHub repository.}}
 \author{Alistair Auffret and Adam Kimberley}
 \note{
 %%  ~~further notes~~
@@ -30,8 +28,12 @@
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-	\dontrun{smooth_map(in.raster, window.size = 25, smooth.function = mean, dark.rm = TRUE, darkValue = 100, pad = TRUE, padValue = NA) }
-	}
+	data(inras)
+	names(in.ras)<-c("red","green","blue")	
+	ras.smoothed<-smooth_map(in.raster=in.ras, window.size = 5, smooth.function = mean, dark.rm = TRUE, darkValue = 80, pad = TRUE, padValue = NA)
+	plotRGB(ras.smoothed)	
+}
+	
 
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

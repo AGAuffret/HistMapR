@@ -21,9 +21,7 @@
 	\item{colour.summary}{Dataframe. Summary of max, min and mean values for each colour band in each category}
 	\item{colour.plot}{Plot. Visualises the values in colour.summary and check they fit expectations.}
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
+\references{Auffret, A.G., Kimberley, A., et al., 2017, HistMapR: Rapid classification of historical maps in R, BiorXiv, doi: doidoidoidodoi, \href{http://alistairauffret.weebly.com/}{Link}. \href{https://github.com/AGAuffret/HistMapR/}{GitHub repository.}}
 \author{Alistair Auffret and Adam Kimberley}
 \note{
 %%  ~~further notes~~
@@ -34,7 +32,10 @@
 \seealso{
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
-\examples{\dontrun{click_sample(in.raster, cats = c("Arable", "Grassland", "Forest"), npoints = 10, print.values = F, type = "p", plot.cols = TRUE, ...) }}
+\examples{
+	data(ras.smoothed)
+	click_sample(in.raster=ras.smoothed, cats = c("Arable", "Grassland", "Forest"), npoints = 3, print.values = FALSE, type = "p", plot.cols = TRUE)
+	 }
 
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

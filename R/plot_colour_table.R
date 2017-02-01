@@ -1,7 +1,7 @@
 plot_colour_table <-
 function(colour.table, errors = 0){
   
-  require(ggplot)
+  require(ggplot2)
   require(gridExtra)
   
   # convert the colour vectors to something ggplot can handle. A vector for mean colours, max and min. Each record is a different category

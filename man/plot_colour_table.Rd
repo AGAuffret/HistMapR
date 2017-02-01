@@ -13,9 +13,7 @@ plot_colour_table(colour.table, errors = 0)
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{Plots a colour table}
-\references{
-%% ~put references to the literature/web site here ~
-}
+\references{Auffret, A.G., Kimberley, A., et al., 2017, HistMapR: Rapid classification of historical maps in R, BiorXiv, doi: doidoidoidodoi, \href{http://alistairauffret.weebly.com/}{Link}. \href{https://github.com/AGAuffret/HistMapR/}{GitHub repository.}}
 \author{Alistair Auffret and Adam Kimberley}
 \note{
 %%  ~~further notes~~
@@ -26,7 +24,9 @@ plot_colour_table(colour.table, errors = 0)
 \seealso{
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
-\examples{\dontrun{plot_colour_table(colour.table, errors = 0) }}
+\examples{
+	data(col.table)
+	plot_colour_table(col.table, errors = 1) }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
 \keyword{ ~kwd1 }

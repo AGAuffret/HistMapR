@@ -2,39 +2,33 @@
 \alias{HistMapR-package}
 \alias{HistMapR}
 \docType{package}
-\title{
-What the package does (short line)
-~~ package title ~~
+\title{Rapid classification of historical land-use maps in R}
+\description{Contains four functions for smoothing, colour assignment and classification of scanned historical land-use maps. Draws mostly from the \code{\link[raster]{raster}} package by R. Hijmans.}
+\usage{
+smooth_map(in.raster, window.size = 25, smooth.function = mean, dark.rm = TRUE, darkValue = 100, pad = TRUE, padValue = NA)
+
+click_sample(in.raster, cats = NULL, npoints = 10, print.values = FALSE, type = "p", plot.cols = TRUE, ...)
+
+plot_colour_table(colour.table, errors = 0)
+
+raster_reclass(in.raster, colour.table = NULL, errors = 0, exceptions = NULL, plot.raster = TRUE, raster.summary = FALSE, save.raster = FALSE, out.file = NULL)
 }
-\description{
-More about what it does (maybe more than one line)
-~~ A concise (1-5 lines) description of the package ~~
-}
+
 \details{
 \tabular{ll}{
 Package: \tab HistMapR\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
+Version: \tab 0.1\cr
 Date: \tab 2017-01-26\cr
-License: \tab What license is it under?\cr
+License: \tab MIT\cr
 }
-~~ An overview of how to use the package, including the most important functions ~~
-}
-\author{
-Who wrote it
 
-Maintainer: Who to complain to <yourfault@somewhere.net>
-~~ The author and/or maintainer of the package ~~
 }
-\references{
-~~ Literature or other references for background information ~~
+\author{Alistair Auffret and Adam Kimberley
+
+Maintainer: Alistair Auffret <alistair.auffret@natgeo.su.se>
 }
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in the R documentation directory ~~
+\references{Auffret, A.G., Kimberley, A., et al., 2017, HistMapR: Rapid classification of historical maps in R, BiorXiv, doi: doidoidoidodoi, \href{http://alistairauffret.weebly.com/}{Link}. \href{https://github.com/AGAuffret/HistMapR/}{GitHub repository.}}
 \keyword{ package }
-\seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
-}
-\examples{
-~~ simple examples of the most important functions ~~
-}
+
+\examples{See individual functions for examples}

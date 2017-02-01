@@ -1,0 +1,18 @@
+bibentry(bibtype = "article",
+         title = "HistMapR: Rapid classification of historical land-use maps in R",
+         author = c(person("Auffret", "Alistair G"),
+                    person("Kimberley", "Adam"),
+                    person("Plue", "Jan"),
+                    person("Skånes", "Helle"),
+                    person("Jakobsson", "Simon"),
+		    person("Waldén", "Emelie"),
+		    person("Wennbom", "Marika"),
+		    person("Wood", "Heather"),
+		    person("Bullock", "James M"),
+		    person("Cousins", "Sara AO"),
+		    person("Gartz", "Mira"),
+		    person("Hooftman", "Danny AP"),
+		    person("Tränk", "Louise")),
+         year = "2017",
+    	 journal = "BioRxiv"     
+	 doi = "10.1101/nnnnnn")

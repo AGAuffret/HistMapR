@@ -1,10 +1,10 @@
 Package: HistMapR
 Type: Package
 Title: Rapid classification of historical land-use maps in R
-Version: 1.0
+Version: 0.1
 Date: 2017-01-26
 Author: Alistair Auffret and Adam Kimberley
 Maintainer: Alistair Auffret <alistair.auffret@natgeo.su.se>
 Description: This package contains four functions for the classification of historical land-use maps in R, calling functions from the 'raster' package by R. Hijmans. A full description of the method is available in Auffret A.G., Kimberley, A. et al. 2017, HistMapR: Rapid classificaion of historical land-use maps in R, BioRxiv ...
-Depends: raster
+Depends: raster, ggplot2, gridExtra
 License: MIT
