@@ -11,7 +11,7 @@ click_sample(in.raster, cats = NULL, npoints = 10, print.values = FALSE, type = 
 
 plot_colour_table(colour.table, errors = 0)
 
-raster_reclass(in.raster, colour.table = NULL, errors = 0, exceptions = NULL, plot.raster = TRUE, raster.summary = FALSE, save.raster = FALSE, out.file = NULL)
+class_map(in.raster, colour.table = NULL, errors = 0, exceptions = NULL, plot.raster = TRUE, raster.summary = FALSE, save.raster = FALSE, out.file = NULL)
 }
 
 \details{
