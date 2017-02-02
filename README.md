@@ -8,12 +8,12 @@ We created this package due to our need to classify large areas of historical la
 
 
 ## Installation
-This package can be installed using the `devtools` package. HistMapR also requires raster, ggplot2 and gridExtra to run the functions. Even though installing through devtools installs dependent packages, there are issues in installing the packages that these are in-turn dependent upon, which can cause problems. This code adapted from <a href="https://github.com/BiologicalRecordsCentre/sparta">here</a>.
+This package can be installed using the `devtools` package. HistMapR also requires `raster`, `ggplot2` and `gridExtra` to run the functions. Even though installing through devtools installs dependent packages, there are issues in installing the packages that these are in-turn dependent upon, which can cause problems. This code adapted from <a href="https://github.com/BiologicalRecordsCentre/sparta">here</a>.
 
 ```R
 req.packages<-c("devtools", "raster", "ggplot2","gridExtra") # required packages
 new.packages <- req.packages[!(req.packages %in% installed.packages()[,"Package"])] # which are not installed?
-if(length(new.packages)) install.packages(new.packages) # installed those as required.
+if(length(new.packages)) install.packages(new.packages) # install those as required.
 
 install_github("AGAuffret/HistMapR")
 library(HistMapR)
