@@ -1,4 +1,4 @@
-raster_reclass <-
+class_map <-
 function(in.raster, colour.table = NULL, errors = 0, exceptions = NULL, plot.raster = TRUE, raster.summary = F, save.raster = F, out.file = NULL){
   
   require(raster)
