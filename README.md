@@ -13,7 +13,7 @@ This package can be installed using the `devtools` package. HistMapR also requir
 ```R
 req.packages<-c("devtools", "raster", "ggplot2","gridExtra") # required packages
 new.packages <- req.packages[!(req.packages %in% installed.packages()[,"Package"])] # which are not installed?
-if(length(new.packages)) install.packages(new.packages) # install those as required.
+if(length(new.packages)) install.packages(new.packages, dep=TRUE) # install those as required.
 
 install_github("AGAuffret/HistMapR")
 library(HistMapR)
