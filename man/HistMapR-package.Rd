@@ -2,7 +2,7 @@
 \alias{HistMapR-package}
 \alias{HistMapR}
 \docType{package}
-\title{Rapid classification of historical land-use maps in R}
+\title{Rapid digitization of historical land-use maps in R}
 \description{Contains four functions for smoothing, colour assignment and classification of scanned historical land-use maps. Draws mostly from the \code{\link[raster]{raster}} package by R. Hijmans.}
 \usage{
 smooth_map(in.raster, window.size = 25, smooth.function = mean, dark.rm = TRUE, darkValue = 100, pad = TRUE, padValue = NA)
@@ -28,7 +28,9 @@ License: \tab MIT\cr
 
 Maintainer: Alistair Auffret <alistair.auffret@natgeo.su.se>
 }
-\references{Auffret, A.G., Kimberley, A., et al., 2017, HistMapR: Rapid classification of historical maps in R, BiorXiv, doi: doidoidoidodoi, \href{http://alistairauffret.weebly.com/}{Link}. \href{https://github.com/AGAuffret/HistMapR/}{GitHub repository.}}
+\references{Auffret, A.G., Kimberley, A., et al., 2017, HistMapR: Rapid digitization of historical maps in R, BiorXiv, doi: doidoidoidodoi, \href{http://alistairauffret.weebly.com/}{Link}. \href{https://github.com/AGAuffret/HistMapR/}{GitHub repository.}
+
+{Hijmans, R.J. (2016) raster: Geographic Data Analysis and Modeling. R package version 2.5-8, url: \href{http://CRAN.R-project.org/package=raster.}http://CRAN.R-project.org/package=raster.}}
 \keyword{ package }
 
 \examples{See individual functions for examples}

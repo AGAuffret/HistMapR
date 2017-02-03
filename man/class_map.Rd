@@ -18,7 +18,7 @@
 }
 \value{Returns the classified raster. Values of raster cells in the output correspond to row numbers in the colour table input, i.e. the category represented by the first row will be 1, the second row 2 etc. Pixels that don't fit into any category (unless specified with 'exceptions') are given 0.
 }
-\references{Auffret, A.G., Kimberley, A., et al., 2017, HistMapR: Rapid classification of historical maps in R, BiorXiv, doi: doidoidoidodoi, \href{http://alistairauffret.weebly.com/}{Link}. \href{https://github.com/AGAuffret/HistMapR/}{GitHub repository.}}
+\references{Auffret, A.G., Kimberley, A., et al., 2017, HistMapR: Rapid digitization of historical maps in R, BiorXiv, doi: doidoidoidodoi, \href{http://alistairauffret.weebly.com/}{Link}. \href{https://github.com/AGAuffret/HistMapR/}{GitHub repository.}}
 \author{Alistair Auffret and Adam Kimberley}
 \note{
 %%  ~~further notes~~

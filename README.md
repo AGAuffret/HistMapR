@@ -1,6 +1,6 @@
 # HistMapR
 
-## *_Rapid classification of historical land-use maps in R_*
+## *_Rapid digitization of historical land-use maps in R_*
 
 
 ## Background

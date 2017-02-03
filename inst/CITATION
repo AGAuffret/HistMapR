@@ -1,5 +1,5 @@
 bibentry(bibtype = "article",
-         title = "HistMapR: Rapid classification of historical land-use maps in R",
+         title = "HistMapR: Rapid digitization of historical land-use maps in R",
 author = personList(as.person("Alistair G. Auffret"),
                     as.person("Adam Kimberley"),
                     as.person("Jan Plue"),
