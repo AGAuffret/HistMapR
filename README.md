@@ -4,7 +4,7 @@
 
 
 ## Background
-We created this package due to our need to classify large areas of historical land-use map quickly and easily. The package contains four functions for the classification of historical land-use maps in R, calling functions from the `raster` package by R. Hijmans. A full description of the method is available in Auffret A.G., Kimberley, A. et al. 2017, HistMapR: Rapid classificaion of historical land-use maps in R, BioRxiv ...
+We created this package due to our need to classify large areas of historical land-use map quickly and easily. The package contains four functions for the classification of historical land-use maps in R, calling functions from the `raster` package by R. Hijmans. A full description of the method is available in Auffret A.G., Kimberley, A. et al. 2017, HistMapR: Rapid digitization of historical land-use maps in R, BioRxiv, doi: 10.1101/109504
 
 
 ## Installation

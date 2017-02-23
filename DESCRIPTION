@@ -1,7 +1,7 @@
 Package: HistMapR
 Type: Package
 Title: Rapid digitization of historical land-use maps in R
-Version: 0.1
+Version: 1.0
 Date: 2017-01-26
 Author: Alistair Auffret and Adam Kimberley
 Maintainer: Alistair Auffret <alistair.auffret@natgeo.su.se>

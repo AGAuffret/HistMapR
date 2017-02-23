@@ -16,6 +16,6 @@ author = personList(as.person("Alistair G. Auffret"),
 
          year = 2017,
     	 journal = "BioRxiv",     
-	 doi = "10.1101/nnnnnn",
+	 doi = "10.1101/109504",
 	 url = "https://github.com/AGAuffret/HistMapR"
 )
