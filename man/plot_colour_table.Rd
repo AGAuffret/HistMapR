@@ -15,8 +15,6 @@ plot_colour_table(colour.table, errors = 0)
 \value{Plots a colour table}
 \references{Auffret, A.G., Kimberley, A., et al., 2017, HistMapR: Rapid digitization of historical maps in R, BiorXiv, doi: 10.1101/109504, \href{https://doi.org/10.1101/109504}{Link}. \href{https://github.com/AGAuffret/HistMapR/}{GitHub repository.}}
 
-{Hijmans, R.J. (2016) raster: Geographic Data Analysis and Modeling. R package version 2.5-8, url: \href{http://CRAN.R-project.org/package=raster.}http://CRAN.R-project.org/package=raster.}
-
 \author{Alistair Auffret and Adam Kimberley}
 \note{
 %%  ~~further notes~~
