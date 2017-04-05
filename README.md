@@ -31,7 +31,7 @@ This package was created by <a href="mailto:alistair.auffret@natgeo.su.se">Alist
 
 ## References
 
-Auffret, A.G., Kimberley, A., Plue, J., Skånes, H., Jakobsson, S., Waldén, E., Wennbom, M., Wood, H., Bullock, J.M., Cousins, S.A.O., Hooftman, D.A.P., Gartz, M. & Tränk, L. (2017) HistMapR: Rapid digitization of historical land-use maps in R. BioRxiv, doi: 10.1101/109504.
+Auffret, A.G., Kimberley, A., Plue, J., Skånes, H., Jakobsson, S., Waldén, E., Wennbom, M., Wood, H., Bullock, J.M., Cousins, S.A.O., Hooftman, D.A.P., Gartz, M. & Tränk, L. (2017) HistMapR: Rapid digitization of historical land-use maps in R. Methods in Ecology and Evolution, doi: 10.1111/2041-210X.12788.
 
 Auffret, A.G., Kimberley, A., Plue, J., Skånes, H., Jakobsson, S., Waldén, E., Wennbom, M., Wood, H., Bullock, J.M., Cousins, S.A.O., Hooftman, D.A.P., Gartz, M. & Tränk, L. (2017) Data from: HistMapR: Rapid digitization of historical land-use maps in R. figshare data repository, doi: 10.17045/sthlmuni.4649854.
 

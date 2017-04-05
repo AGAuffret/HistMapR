@@ -13,7 +13,7 @@ plot_colour_table(colour.table, errors = 0)
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{Plots a colour table}
-\references{Auffret, A.G., Kimberley, A., et al., 2017, HistMapR: Rapid digitization of historical maps in R, BiorXiv, doi: 10.1101/109504, \href{https://doi.org/10.1101/109504}{Link}. \href{https://github.com/AGAuffret/HistMapR/}{GitHub repository.}}
+\references{Auffret, A.G., Kimberley, A., et al., 2017, HistMapR: Rapid digitization of historical maps in R, Methods in Ecology and Evolution, doi: 10.1111/2041-210X.12788., \href{https://doi.org/10.1111/2041-210X.12788}{Link}. \href{https://github.com/AGAuffret/HistMapR/}{GitHub repository.}}
 
 \author{Alistair Auffret and Adam Kimberley}
 \note{

@@ -15,7 +15,7 @@ author = personList(as.person("Alistair G. Auffret"),
 		    as.person("Louise Trank")),
 
          year = 2017,
-    	 journal = "BioRxiv",     
-	 doi = "10.1101/109504",
+    	 journal = "Methods in Ecology and Evolution",     
+	 doi = "10.1111/2041-210X.12788",
 	 url = "https://github.com/AGAuffret/HistMapR"
 )
