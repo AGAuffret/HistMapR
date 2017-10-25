@@ -14,7 +14,7 @@ function(in.raster, cats = NULL, npoints = 10, print.values = F, type = "p", plo
   }
   
   if(any(names(in.raster) != c("red", "green", "blue"))){
-    stop("Error: Bands incorrectly named")
+    stop("Error: Bands incorrectly named - please rename and if necessary reorder to 'red', 'green' and 'blue'")
   }
   
   #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#

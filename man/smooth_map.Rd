@@ -4,7 +4,7 @@
 \description{Smooths out inconsistencies in the map by performing a function on each pixel based on the values of surrounding pixels. Can also remove dark RGB values, typically used for map text, boundaries etc.}
 \usage{smooth_map(in.raster, window.size = 25, smooth.function = mean, dark.rm = TRUE, darkValue = 100, pad = TRUE, padValue = NA)}
 \arguments{
-  \item{in.raster}{The raster object to be smoothed. }
+  \item{in.raster}{The raster object to be smoothed. This must be an RGB raster object, i.e. with three colour bands. Other types of raster may return an error, but can be converted e.g. in QGIS.}
   \item{window.size}{Integer. Default = 25. Must be odd. Passed to \code{\link[raster]{focal}} via \code{\link[base]{matrix}} to determine the size in pixels of the window (larger window = greater generalization). }
   \item{smooth.function}{Function. Name of an R function to apply within the window specified. Default = mean. Other functions e.g. max, min, modal are possible but run very slowly. See \code{\link[raster]{focal}} for details. }
   \item{dark.rm}{Logical. Reduce the effect of map text, boundaries etc. by removing the darkest pixels prior to smoothing. Default is TRUE. }

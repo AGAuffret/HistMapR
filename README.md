@@ -4,7 +4,7 @@
 
 
 ## Background
-We created this package due to our need to classify large areas of historical land-use map quickly and easily. The package contains four functions for the classification of historical land-use maps in R, calling functions from the `raster` package by R. Hijmans. A full description of the method is available <a href="https://doi.org/10.1101/109504" target="_blank">here.</a> 
+We created this package due to our need to classify large areas of historical land-use map quickly and easily. The package contains four functions for the classification of historical land-use maps in R, calling functions from the `raster` package by R. Hijmans. A full description of the method is available <a href="https://doi.org/10.1111/2041-210X.12788" target="_blank">here.</a> 
 
 
 ## Installation
@@ -20,8 +20,8 @@ install_github("AGAuffret/HistMapR")
 library(HistMapR)
 ```
 
-## Examples
-Very simple examples of each function can be seen using the `examples` function. The input maps in these examples are from the Swedish Agency Lantmäteriet (copyright expired). A more detailed tutorial with walkthrough scripts and examples can be found on Figshare, along with the historical land-use classification over southern Sweden for which this package was created. <a href="https://doi.org/10.17045/sthlmuni.4649854" target="_blank">Link.</a>
+## Examples and tutorials
+Very simple examples of each function can be seen using the `examples` function. The input maps in these examples are from the Swedish Agency Lantmäteriet (copyright expired). A more detailed tutorial with walkthrough scripts and examples can be found on Figshare, along with the historical land-use classification over southern Sweden for which this package was created. <a href="https://doi.org/10.17045/sthlmuni.4649854" target="_blank">Link.</a>. There is also a <a href="https://www.youtube.com/watch?v=5iD1pyDBBks" target="_blank">very basic 10 minute tutorial video </a> that we made to go with the published paper, where we walk through the process of digitizing maps with HistMapR.
 
 
 ## Contributors and maintenance
