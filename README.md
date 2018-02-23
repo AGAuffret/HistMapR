@@ -26,7 +26,7 @@ Very simple examples of each function can be seen using the `examples` function.
 
 ## Contributors and maintenance
 
-This package was created by <a href="mailto:alistair.auffret@natgeo.su.se">Alistair Auffret</a> and Adam Kimberley. It's our first package and first time on GitHub, so help and suggestions are welcome.
+This package was created by <a href="mailto:alistair.auffret@slu.se">Alistair Auffret</a> and Adam Kimberley. It's our first package and first time on GitHub, so help and suggestions are welcome.
 
 
 ## References
