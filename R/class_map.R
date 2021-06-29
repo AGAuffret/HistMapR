@@ -50,9 +50,9 @@ function(in.raster, colour.table = NULL, errors = 0, exceptions = NULL, plot.ras
   # Print map summary if requested
 
   if(raster.summary == TRUE){
-      ras.summary<-data.frame(cat=col.table$cat, pixels=sapply(col.table$cat,function(x) sum(values(reclassified.raster==which(col.table$cat==x)))), 
-                              area= sapply(col.table$cat,function(x) sum(values(reclassified.raster==which(col.table$cat==x)))*res(reclassified.raster)[1]), 
-                              fraction=sapply(col.table$cat,function(x) sum(values(reclassified.raster==which(col.table$cat==x)))/length(values(reclassified.raster))))
+      ras.summary<-data.frame(cat=colour.table$cat, pixels=sapply(colour.table$cat,function(x) sum(values(reclassified.raster==which(colour.table$cat==x)))), 
+                              area= sapply(colour.table$cat,function(x) sum(values(reclassified.raster==which(colour.table$cat==x)))*res(reclassified.raster)[1]), 
+                              fraction=sapply(colour.table$cat,function(x) sum(values(reclassified.raster==which(colour.table$cat==x)))/length(values(reclassified.raster))))
  
     cat("\n Summary table for output raster: \n\n",sep="")
     
