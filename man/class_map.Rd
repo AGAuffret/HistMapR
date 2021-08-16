@@ -35,7 +35,7 @@ Hijmans, R.J. (2016) raster: Geographic Data Analysis and Modeling. R package ve
 }
 \examples{
 	data(HistMapRex)
-	class_map(in.raster=ras.smoothed, colour.table = col.table, errors = 5, exceptions = "Arable", plot.raster = TRUE, raster.summary = TRUE, save.raster = FALSE, out.file = NULL) 
+	class_map(in.raster=ras.smoothed, colour.table = col.table, errors = 5, exceptions = "Arable", plot.raster = TRUE, raster.summary = TRUE, return.raster = FALSE, save.raster = FALSE, out.file = NULL) 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
