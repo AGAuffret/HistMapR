@@ -80,9 +80,9 @@ class_map <-
       
       for(k in colour.table$newvar){
         catlabel <- colour.table$cat[k]
-        par(col.axis="white",col.lab="white",tck=0);plot(reclassified.raster$cat==k, axes=TRUE, legend=FALSE, main=paste("Category",catlabel)) # create invisible axes and plot raster categories
+        par(col.axis="white",col.lab="white",tck=0); raster::plot(reclassified.raster$cat==k, axes=TRUE, legend=FALSE, main=paste("Category",catlabel)) # create invisible axes and plot raster categories
       }
-      par(col.axis="white",col.lab="white",tck=0); plot(reclassified.raster$cat==0, axes=TRUE, legend=FALSE, main="unclassed") # finally create invisible axes and plot pixels not in a class
+      par(col.axis="white",col.lab="white",tck=0); raster::plot(reclassified.raster$cat==0, axes=TRUE, legend=FALSE, main="unclassed") # finally create invisible axes and plot pixels not in a class
       
       
       # reset plotting window
