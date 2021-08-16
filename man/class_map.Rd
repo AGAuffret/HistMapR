@@ -10,7 +10,7 @@
   \item{exceptions}{Assign those (non-NA) pixels not falling within any colours in the colour table as a specific category string. Defaults to NULL, which can be useful for inspection, but will usually be assigned to a category in the end. }
   \item{plot.raster}{Logical. Plots the resulting classification, showing first the input raster, then each category separately, finishing with pixels not assigned to any class. }
   \item{raster.summary}{Logical. Print summary statistics describing the number of pixels and area (according to the attributes of the in raster)for each category in the classified raster. }
-   \item{return.raster}{Logical. Do you want to return the raster as an object into your workspace?}
+   \item{return.raster}{Logical. Do you want to return the raster as an object into your workspace? If so, you will also need to assign the function to an object, otherwise R will just print the raster information in the console.}
   \item{save.raster}{Logical. Do you want to save the resulting raster using \code{\link[raster]{writeRaster}}? Saves as GeoTiff with the data type INT1U.}
   \item{out.file}{Character. Filepath and name to pass to writeRaster. Include extenstion ".tif" (one f)}
 }
