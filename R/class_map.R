@@ -28,12 +28,12 @@ class_map <-
     colour.table$newvar <- 1:nrow(colour.table)
     
     reclassified.raster <-raster(in.raster,layer=0) # create new RasterLayer based on the RGB stack, with no values
-    reclassified.raster$cat<-0 # create empty value category
+    values(reclassified.raster)<-0 # create empty value category
     
     # loop through each category, take the threshold values for each band from the colour table & perform the 
     # reclassification.
     for(i in colour.table$newvar){
-      reclassified.raster$cat[in.raster$red< colour.table$Rmax[i] + colour.table$Rse[i]*errors & 
+      reclassified.raster[in.raster$red< colour.table$Rmax[i] + colour.table$Rse[i]*errors & 
                                 in.raster$green< colour.table$Gmax[i] + colour.table$Gse[i]*errors & 
                                 in.raster$blue< colour.table$Bmax[i] + colour.table$Bse[i]*errors &
                                 in.raster$red > colour.table$Rmin[i] - colour.table$Rse[i]*errors & 
@@ -43,7 +43,7 @@ class_map <-
     
     
     if(!is.null(exceptions)){
-      reclassified.raster$cat[reclassified.raster$cat == 0 & !is.na(in.raster[[1]])] <- which(colour.table$cat == exceptions)
+      reclassified.raster[reclassified.raster == 0 & !is.na(in.raster[[1]])] <- which(colour.table$cat == exceptions)
     }
     
     
@@ -98,7 +98,7 @@ class_map <-
     
     if(save.raster == TRUE){
       
-      writeRaster(reclassified.raster, out.file, "GTiff", datatype="INT1U", overwrite = F)
+      writeRaster(reclassified.raster, out.file, "GTiff", datatype="INT1U", overwrite = FALSE)
       
       cat("Map saved to ", out.file, "\n")
     }
