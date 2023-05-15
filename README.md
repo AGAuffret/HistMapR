@@ -21,7 +21,7 @@ library(HistMapR)
 ```
 
 ## Examples and tutorials
-Very simple examples of each function can be seen using the `examples` function. The input maps in these examples are from the Swedish Agency Lantmäteriet (copyright expired). A more detailed tutorial with walkthrough scripts and examples can be found on Figshare, along with the historical land-use classification over southern Sweden for which this package was created. <a href="https://doi.org/10.17045/sthlmuni.4649854" target="_blank">Link.</a>. There is also a <a href="https://www.youtube.com/watch?v=5iD1pyDBBks" target="_blank">very basic 10 minute tutorial video </a> that we made to go with the published paper, where we walk through the process of digitizing maps with HistMapR.
+Very simple examples of each function can be seen using the `examples` function. The input maps in these examples are from the Swedish Agency Lantmäteriet (copyright expired). A more detailed tutorial with walkthrough scripts and examples can be found on Figshare (though not updated with package updates, so it's always good to check the help files), along with the historical land-use classification over southern Sweden for which this package was created. <a href="https://doi.org/10.17045/sthlmuni.4649854" target="_blank">Link.</a>. There is also a <a href="https://www.youtube.com/watch?v=5iD1pyDBBks" target="_blank">very basic 10 minute tutorial video </a> that we made to go with the published paper, where we walk through the process of digitizing maps with HistMapR.
 
 
 ## Contributors and maintenance
