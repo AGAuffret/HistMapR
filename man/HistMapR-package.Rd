@@ -3,9 +3,9 @@
 \alias{HistMapR}
 \docType{package}
 \title{Rapid digitization of historical land-use maps in R}
-\description{Contains four functions for smoothing, colour assignment and classification of scanned historical land-use maps. Draws mostly from the \code{\link[raster]{raster}} package by R. Hijmans.}
+\description{Contains four functions for smoothing, colour assignment and classification of scanned historical land-use maps. Draws mostly from the \code{\link[terra]{terra}} package by R. Hijmans.}
 \usage{
-smooth_map(in.raster, window.size = 25, smooth.function = mean, dark.rm = TRUE, darkValue = 100, pad = TRUE, padValue = NA)
+smooth_map(in.raster, window.size = 25, smooth.function = mean, dark.rm = TRUE, darkValue = 100, clip.frame = FALSE)
 
 click_sample(in.raster, cats = NULL, npoints = 10, print.values = FALSE, type = "p", plot.cols = TRUE, ...)
 
@@ -18,20 +18,21 @@ class_map(in.raster, colour.table = NULL, errors = 0, exceptions = NULL, plot.ra
 \tabular{ll}{
 Package: \tab HistMapR\cr
 Type: \tab Package\cr
-Version: \tab 0.1\cr
-Date: \tab 2017-01-26\cr
+Version: \tab 0.2\cr
+Date: \tab 2025-02-06\cr
 License: \tab MIT\cr
 }
 
 }
 \author{Alistair Auffret and Adam Kimberley
 
-Maintainer: Alistair Auffret <alistair.auffret@natgeo.su.se>
+Maintainer: Alistair Auffret <alistair.auffret@slu.se>
 }
 \references{
 Auffret, A.G., Kimberley, A., et al., 2017, HistMapR: Rapid digitization of historical maps in R, Methods in Ecology and Evolution, doi: 10.1111/2041-210X.12788., \href{https://doi.org/10.1111/2041-210X.12788}{Link}. \href{https://github.com/AGAuffret/HistMapR/}{GitHub repository.}
 
-Hijmans, R.J. (2016) raster: Geographic Data Analysis and Modeling. R package version 2.5-8, \href{http://CRAN.R-project.org/package=raster}{http://CRAN.R-project.org/package=raster.}}
+Hijmans, R.J. (2023) terra: Spatial Data Analysis. R package version 1.7-29, \href{https://CRAN.R-project.org/package=terra}{https://CRAN.R-project.org/package=terra.}}
+
 \keyword{ package }
 
 \examples{See individual functions for examples}

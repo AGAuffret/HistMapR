@@ -1,10 +1,10 @@
 Package: HistMapR
 Type: Package
 Title: Rapid digitization of historical land-use maps in R
-Version: 1.0
-Date: 2017-01-26
+Version: 0.2
+Date: 2025-02-06
 Author: Alistair Auffret and Adam Kimberley
-Maintainer: Alistair Auffret <alistair.auffret@natgeo.su.se>
+Maintainer: Alistair Auffret <alistair.auffret@slu.se>
 Description: This package contains four functions for the digitization of historical land-use maps in R, calling functions from the 'raster' package by R. Hijmans. A full description of the method is available in Auffret A.G., Kimberley, A. et al. 2017, HistMapR: Rapid digitization of historical land-use maps in R, Methods in Ecology and Evolution, doi: 10.1111/2041-210X.12788.
-Depends: raster, ggplot2, gridExtra
+Depends: terra, ggplot2, gridExtra
 License: MIT

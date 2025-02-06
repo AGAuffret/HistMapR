@@ -4,7 +4,7 @@
 \description{Classify a raster image based on table of identified colour thresholds. }
 \usage{class_map(in.raster, colour.table = NULL, errors = 0, exceptions = NULL, plot.raster = TRUE, raster.summary = FALSE, return.raster=FALSE, save.raster = FALSE, out.file = NULL)}
 \arguments{
-  \item{in.raster}{The smoothed raster to be Classified. }
+  \item{in.raster}{The smoothed SpatRaster to be classified. }
   \item{colour.table}{Dataframe containing colour thresholds for different categories. Should either be an output from \code{\link{click_sample}} or else have an identical structure.}
   \item{errors}{Integer. Expand the range by n x the standard error within a sample. Higher numbers mean a larger range, but also increase the likelihood and magnitude of overlap between categories. }
   \item{exceptions}{Assign those (non-NA) pixels not falling within any colours in the colour table as a specific category string. Defaults to NULL, which can be useful for inspection, but will usually be assigned to a category in the end. }
@@ -22,7 +22,8 @@
 \references{
 Auffret, A.G., Kimberley, A., et al., 2017, HistMapR: Rapid digitization of historical maps in R, Methods in Ecology and Evolution, doi: 10.1111/2041-210X.12788., \href{https://doi.org/10.1111/2041-210X.12788}{Link}. \href{https://github.com/AGAuffret/HistMapR/}{GitHub repository.}
 
-Hijmans, R.J. (2016) raster: Geographic Data Analysis and Modeling. R package version 2.5-8, \href{http://CRAN.R-project.org/package=raster}{http://CRAN.R-project.org/package=raster.}}
+Hijmans, R.J. (2023) terra: Spatial Data Analysis. R package version 1.7-29, \href{https://CRAN.R-project.org/package=terra}{https://CRAN.R-project.org/package=terra.}}
+
 \author{Alistair Auffret and Adam Kimberley}
 \note{
 %%  ~~further notes~~

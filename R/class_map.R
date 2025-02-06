@@ -1,16 +1,16 @@
 class_map <-
   function(in.raster, colour.table = NULL, errors = 0, exceptions = NULL, plot.raster = TRUE, raster.summary = FALSE, return.raster=FALSE, save.raster = FALSE, out.file = NULL){
     
-    require(raster)
+    require(terra)
     
-    # Stop and provide a useful error message if the in.raster object is not found or not a Raster* object or cats/save location aren't specified
+    # Stop and provide a useful error message if the in.raster object is not found or not a SpatRaster object or cats/save location aren't specified
+    
+    if(!class(in.raster)[1] == "SpatRaster"){
+      stop("Error: Input must be a SpatRaster object")
+    }
     
     if(save.raster == TRUE & is.null(out.file) == TRUE){
       stop("Error: Output file location not specified")
-    }
-    
-    if(any(j <- grep("Raster",class(in.raster)[1])) == FALSE){
-      stop("Error: Input is not a valid raster object")
     }
     
     if(is.null(colour.table) == TRUE){
@@ -27,25 +27,23 @@ class_map <-
     
     colour.table$newvar <- 1:nrow(colour.table)
     
-    reclassified.raster <-raster(in.raster,layer=0) # create new RasterLayer based on the RGB stack, with no values
-    values(reclassified.raster)<-0 # create empty value category
+    reclassified.raster <-rast(in.raster, nlyrs=1, vals=0) # create new RasterLayer based on the RGB input, with no values
     
     # loop through each category, take the threshold values for each band from the colour table & perform the 
     # reclassification.
     for(i in colour.table$newvar){
-      reclassified.raster[in.raster$red< colour.table$Rmax[i] + colour.table$Rse[i]*errors & 
-                                in.raster$green< colour.table$Gmax[i] + colour.table$Gse[i]*errors & 
-                                in.raster$blue< colour.table$Bmax[i] + colour.table$Bse[i]*errors &
-                                in.raster$red > colour.table$Rmin[i] - colour.table$Rse[i]*errors & 
-                                in.raster$green > colour.table$Gmin[i] - colour.table$Gse[i]*errors & 
-                                in.raster$blue > colour.table$Bmin[i] - colour.table$Bse[i]*errors] <- i
+      var.cells<-which(values(in.raster$red< colour.table$Rmax[i] + colour.table$Rse[i]*errors) & 
+                         values(in.raster$green< colour.table$Gmax[i] + colour.table$Gse[i]*errors) & 
+                         values(in.raster$blue< colour.table$Bmax[i] + colour.table$Bse[i]*errors) &
+                         values(in.raster$red > colour.table$Rmin[i] - colour.table$Rse[i]*errors) & 
+                         values(in.raster$green > colour.table$Gmin[i] - colour.table$Gse[i]*errors) & 
+                         values(in.raster$blue > colour.table$Bmin[i] - colour.table$Bse[i]*errors))
+      set.values(reclassified.raster,var.cells,values=i)
     }
-    
     
     if(!is.null(exceptions)){
-      reclassified.raster[reclassified.raster == 0 & !is.na(in.raster[[1]])] <- which(colour.table$cat == exceptions)
+      set.values(reclassified.raster, which(values(reclassified.raster)==0 & values(!is.na(in.raster[[1]]))), values=which(colour.table$cat == exceptions))
     }
-    
     
     # Print map summary if requested
     
@@ -60,13 +58,13 @@ class_map <-
       
     }
     
+    # Remind user which category is which and which other parameters were chosen
     
-    # Remind user which category is which
-    
-    cat("\n Raster categories:\n") 
+    cat("\n Raster categories:") 
     for(j in colour.table$newvar){
-      cat("\n\t", as.character(colour.table$cat[j]), " = ", j, sep = "")
+      cat("\n\t", as.character(colour.table$cat[j]), " = ", j)
     } 
+    cat("\n\n Errors: ", errors, "\n Exceptions: ", exceptions) 
     cat("\n\n") 
     
     
@@ -80,9 +78,9 @@ class_map <-
       
       for(k in colour.table$newvar){
         catlabel <- colour.table$cat[k]
-        par(col.axis="white",col.lab="white",tck=0); raster::plot(reclassified.raster==k, axes=TRUE, legend=FALSE, main=paste("Category",catlabel)) # create invisible axes and plot raster categories
+        par(col.axis="white",col.lab="white",tck=0); terra::plot(reclassified.raster==k, axes=TRUE, legend=FALSE, main=paste("Category",catlabel)) # create invisible axes and plot raster categories
       }
-      par(col.axis="white",col.lab="white",tck=0); raster::plot(reclassified.raster==0, axes=TRUE, legend=FALSE, main="unclassed") # finally create invisible axes and plot pixels not in a class
+      par(col.axis="white",col.lab="white",tck=0); terra::plot(reclassified.raster==0, axes=TRUE, legend=FALSE, main="unclassed") # finally create invisible axes and plot pixels not in a class
       
       
       # reset plotting window
@@ -92,13 +90,13 @@ class_map <-
       
       # Print user guidance  
       
-      cat("\n\n If this classification looks inaccurate, we recommend: \n\t [1] Changing the 'error' argument to alter the threshold boundaries (currently +/- ",errors,"* the sampled standard error for each colour band) \n\t [2] Altering the 'exceptions' argument to assign unclassed pixels as a specific category (currently ",exceptions,")\n\t [3] Altering the row order in your colour threshold table (plotting order) \n\t [4] Re-running click_sample \n\t [5] Manually editing the colour table.\n\n",sep="")
+      cat("\n If this classification looks inaccurate, we recommend: \n\t [1] Changing the 'error' argument to alter the threshold boundaries (currently +/- ",errors,"* the sampled standard error for each colour band) \n\t [2] Altering the 'exceptions' argument to assign unclassed pixels as a specific category (currently ",exceptions,")\n\t [3] Altering the row order in your colour threshold table (plotting order) \n\t [4] Re-running click_sample \n\t [5] Manually editing the colour table.\n\n",sep="")
       
     }
     
     if(save.raster == TRUE){
       
-      writeRaster(reclassified.raster, out.file, "GTiff", datatype="INT1U", overwrite = FALSE)
+      writeRaster(reclassified.raster, out.file, datatype="INT1U", overwrite = FALSE)
       
       cat("Map saved to ", out.file, "\n")
     }
