@@ -26,7 +26,8 @@ plot_colour_table(colour.table, errors = 0)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-	data(HistMapRex)
+	df.loc <- system.file("data/col.table.csv", package="HistMapR")
+	col.table <- read.csv(df.loc)
 	plot_colour_table(col.table, errors = 1) }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

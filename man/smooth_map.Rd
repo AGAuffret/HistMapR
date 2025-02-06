@@ -31,7 +31,8 @@ Hijmans, R.J. (2023) terra: Spatial Data Analysis. R package version 1.7-29, \hr
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-	data(HistMapRex)
+	ras.loc <- system.file("data/in.ras.tiff", package="HistMapR")
+	in.ras <- rast(ras.loc)
 	names(in.ras)<-c("red","green","blue")	
 	ras.smoothed<-smooth_map(in.raster=in.ras, window.size = 5, smooth.function = mean, dark.rm = TRUE, darkValue = 80, clip.frame = FALSE)
 	plotRGB(ras.smoothed)	

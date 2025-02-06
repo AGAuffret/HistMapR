@@ -37,7 +37,8 @@ Hijmans, R.J. (2023) terra: Spatial Data Analysis. R package version 1.7-29, \hr
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-	data(HistMapRex)
+	ras.loc <- system.file("data/ras.smoothed.tiff", package="HistMapR")
+	ras.smoothed <- rast(ras.loc)
 	click_sample(in.raster=ras.smoothed, cats = c("Arable", "Open", "Forest"), npoints = 3, print.values = FALSE, type = "p", plot.cols = TRUE)
 	 }
 
