@@ -2,7 +2,7 @@
 \alias{class_map}
 \title{Classify a raster. }
 \description{Classify a raster image based on table of identified colour thresholds. }
-\usage{class_map(in.raster, colour.table = NULL, errors = 0, exceptions = NULL, plot.raster = TRUE, raster.summary = FALSE, return.raster=FALSE, save.raster = FALSE, out.file = NULL)}
+\usage{class_map(in.raster, colour.table = NULL, errors = 0, exceptions = NULL, plot.raster = FALSE, raster.summary = FALSE, return.raster=FALSE, save.raster = FALSE, out.file = NULL)}
 \arguments{
   \item{in.raster}{The smoothed SpatRaster to be classified. }
   \item{colour.table}{Dataframe containing colour thresholds for different categories. Should either be an output from \code{\link{click_sample}} or else have an identical structure.}
@@ -17,7 +17,7 @@
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
-\value{Returns the classified raster. Values of raster cells in the output correspond to row numbers in the colour table input, i.e. the category represented by the first row will be 1, the second row 2 etc. Pixels that don't fit into any category (unless specified with 'exceptions') are given 0.
+\value{Saves, returns and/or plots the classified raster. Values of raster cells in the output correspond to row numbers in the colour table input, i.e. the category represented by the first row will be 1, the second row 2 etc. Pixels that don't fit into any category (unless specified with 'exceptions') are given 0.
 }
 \references{
 Auffret, A.G., Kimberley, A., et al., 2017, HistMapR: Rapid digitization of historical maps in R, Methods in Ecology and Evolution, doi: 10.1111/2041-210X.12788., \href{https://doi.org/10.1111/2041-210X.12788}{Link}. \href{https://github.com/AGAuffret/HistMapR/}{GitHub repository.}

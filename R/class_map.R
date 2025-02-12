@@ -1,9 +1,13 @@
 class_map <-
-  function(in.raster, colour.table = NULL, errors = 0, exceptions = NULL, plot.raster = TRUE, raster.summary = FALSE, return.raster=FALSE, save.raster = FALSE, out.file = NULL){
+  function(in.raster, colour.table = NULL, errors = 0, exceptions = NULL, plot.raster = FALSE, raster.summary = FALSE, return.raster=FALSE, save.raster = FALSE, out.file = NULL){
     
     require(terra)
     
     # Stop and provide a useful error message if the in.raster object is not found or not a SpatRaster object or cats/save location aren't specified
+    
+    if(plot.raster==FALSE & return.raster==FALSE & save.raster==FALSE){
+      stop("Error: You need to set at least one of plot.raster, return.raster or save.raster to TRUE")
+    }
     
     if(!class(in.raster)[1] == "SpatRaster"){
       stop("Error: Input must be a SpatRaster object")
