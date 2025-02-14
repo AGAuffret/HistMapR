@@ -32,7 +32,10 @@ Hijmans, R.J. (2023) terra: Spatial Data Analysis. R package version 1.7-29, \hr
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-	ras.loc <- system.file("data/in.ras.tiff", package="HistMapR")
+	data.loc <- system.file("data", package="HistMapR")
+	ras.smoothed <- rast(paste0(data.loc,"/ras.smoothed.tiff"))
+	col.table <- read.csv(paste0(data.loc,"/col.table.csv"))
+
 	HistWrapR(ras.file=ras.loc, colour.table = col.table, out.format="return") 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
