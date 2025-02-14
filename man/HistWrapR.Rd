@@ -1,7 +1,7 @@
 \name{HistWrapR}
 \alias{HistWrapR}
 \title{Smooth and classify a raster. }
-\description{A wrapper function that runs both \code{\link{smooth_map}} and \code{\link{class_map}}, useful for iterating the same arguments over similar maps with \code{\link{lapply}} or \code{\link{parallel::mclapply}}. My experience is that running multiple maps \code{lapply} is not quicker than a \code{for} loop running the two HistMapR functions separately, and looping makes it easier to follow progress. However, parallelisation with \code{mclapply} has the potential to be considerably faster, hence this function}
+\description{A wrapper function that runs both \code{\link{smooth_map}} and \code{\link{class_map}}, useful for iterating the same arguments over similar maps with \code{\link{lapply}} or \code{\link[parallel]mclapply}}. My experience is that running multiple maps \code{lapply} is not quicker than a \code{for} loop running the two HistMapR functions separately, and looping makes it easier to follow progress. However, parallelisation with \code{mclapply} has the potential to be considerably faster, hence this function}
 \usage{HistWrapR(ras.file, colour.table=NULL, out.format="save", out.dir=".", ...)}
 \arguments{
   \item{ras.file}{The path to the input raster to be smoothed and classified. Note that this is not the raster object itself (as with other functions in HistMapR), but the path to it, which allows for parallelisation. }

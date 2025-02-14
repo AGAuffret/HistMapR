@@ -41,7 +41,7 @@ Auffret, A.G., Kimberley, A., Plue, J., Skånes, H., Jakobsson, S., Waldén, E.,
 
 Hijmans, R.J. (2016) raster: Geographic Data Analysis and Modeling. R package version 2.5-8, url: http://CRAN.R-project.org/package=raster.
 
-Hijmans, R.J. (2023) terra: patial Data Analysis. R package version 1.7-29, url: http://CRAN.R-project.org/package=terra.
+Hijmans, R.J. (2023) terra: Spatial Data Analysis. R package version 1.7-29, url: http://CRAN.R-project.org/package=terra.
 
 ## Licence
 
