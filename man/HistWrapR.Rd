@@ -33,7 +33,7 @@ Hijmans, R.J. (2023) terra: Spatial Data Analysis. R package version 1.7-29, \hr
 }
 \examples{
 	ras.loc <- system.file("data/in.ras.tiff", package="HistMapR")
-	HistWrapR(ras.file=ras.loc, colour.table = col.table, out.format="return"") 
+	HistWrapR(ras.file=ras.loc, colour.table = col.table, out.format="return") 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
