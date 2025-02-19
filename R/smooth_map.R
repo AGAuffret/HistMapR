@@ -13,8 +13,8 @@ smooth_map <-
       stop("Error: Bands incorrectly named - please rename and if necessary reorder to 'red', 'green' and 'blue'")
     }
     
-    # Create "frame" for cutting away edges that smooth into non-mapped areas
-    if(clip.frame == TRUE){map.frame <- in.raster[[1]]==0 | in.raster[[2]]==0 | in.raster[[3]]==0}
+    # Identify pixels for "frame" for cutting away edges that smooth into non-mapped areas
+    if(clip.frame == TRUE){frame.cells <- which(values(in.raster[[1]])==0 | values(in.raster[[2]])==0 | values(in.raster[[3]])==0)}
     
     # Remove dark text, boundaries etc first by assigning values as NA (if that option is selected by the user) 
     if(dark.rm == TRUE){
@@ -27,7 +27,7 @@ smooth_map <-
     set.names(in.raster, c("red","green","blue"))
     
     # Use the frame created earlier to assign NA to those pixels outside the mapped area.
-    if(clip.frame == TRUE){set.values(in.raster, which(values(map.frame)==1), NA)}
+    if(clip.frame == TRUE){values(in.raster)[frame.cells] <- NA}
     
     # return the smoothed raster stack object
     return(in.raster)
