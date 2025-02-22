@@ -9,7 +9,9 @@
   \item{smooth.function}{Function. Name of an R function to apply within the window specified. Default = mean. Other functions e.g. max, min, modal are possible but run very slowly. See \code{\link[raster]{focal}} for details. }
   \item{dark.rm}{Logical. Reduce the effect of map text, boundaries etc. by removing the darkest pixels prior to smoothing. Default is TRUE. }
   \item{darkValue}{Integer. Value below which all RGB layers should have for a pixel to be removed prior to smoothing. Default is 100. Too high values result in the appearance of large patches of white (NA) appear. Too low and text etc can interfere with land use categories. }
-  \item{clip.frame}{Logical. Should the smoothed map be 'clipped' to remove areas of the input raster that are not mapped (for example because the image is not straight)? Default is FALSE.}
+  \item{clip.frame}{Logical. Should the smoothed map be 'clipped' to remove areas of the input raster that are not mapped (for example because the image is not straight)? Default is FALSE, which can be useful for mosaicking maps later, while TRUE keeps the classification within the bounds of the input map.}
+    \item{frame.type}{Character. If clipping the frame, are the unmapped values 'black' (i.e. RGB values all zero (not always a very clean clip in these cases), or 'na'. Choosing incorrectly will just mean that the frame doesn't get clipped. Default is 'black'..}
+
  }
 \details{
 See \code{\link[terra]{focal}} for details. 

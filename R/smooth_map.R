@@ -1,5 +1,5 @@
 smooth_map <-
-  function(in.raster, window.size = 25, smooth.function = mean, dark.rm = TRUE, darkValue = 100, clip.frame = FALSE){
+  function(in.raster, window.size = 25, smooth.function = mean, dark.rm = TRUE, darkValue = 100, clip.frame = FALSE, frame.type = "black"){
     
     require(terra)
     
@@ -13,8 +13,15 @@ smooth_map <-
       stop("Error: Bands incorrectly named - please rename and if necessary reorder to 'red', 'green' and 'blue'")
     }
     
+    if(clip.frame == TRUE & !frame.type %in% c("black", "na")){
+      stop("Error: frame.type must be either 'black', or 'na'")
+    }
+    
     # Identify pixels for "frame" for cutting away edges that smooth into non-mapped areas
-    if(clip.frame == TRUE){frame.cells <- which(values(in.raster[[1]])==0 | values(in.raster[[2]])==0 | values(in.raster[[3]])==0)}
+    # Black frame
+    if(clip.frame == TRUE & frame.type == "black"){frame.cells <- which(values(in.raster[[1]])==0 & values(in.raster[[2]])==0 & values(in.raster[[3]])==0)}
+    # NA frame
+    if(clip.frame == TRUE & frame.type == "na"){which(is.na(values(in.raster[[1]])))}
     
     # Remove dark text, boundaries etc first by assigning values as NA (if that option is selected by the user) 
     if(dark.rm == TRUE){
