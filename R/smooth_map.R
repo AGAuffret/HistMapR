@@ -26,7 +26,7 @@ smooth_map <-
     # Remove dark text, boundaries etc first by assigning values as NA (if that option is selected by the user) 
     if(dark.rm == TRUE){
     dark.cells <- which(values(in.raster[[1]])<darkValue & values(in.raster[[2]])<darkValue & values(in.raster[[3]]<darkValue))
-    values(in.raster)[dark.cells] <- NA
+    in.raster[dark.cells] <- NA
     }
     
     # Smooth the bands of the original raster
@@ -34,7 +34,7 @@ smooth_map <-
     set.names(in.raster, c("red","green","blue"))
     
     # Use the frame created earlier to assign NA to those pixels outside the mapped area.
-    if(clip.frame == TRUE){values(in.raster)[frame.cells] <- NA}
+    if(clip.frame == TRUE){in.raster[frame.cells] <- NA}
     
     # return the smoothed raster stack object
     return(in.raster)
