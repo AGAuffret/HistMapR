@@ -21,7 +21,7 @@ smooth_map <-
     # Black frame
     if(clip.frame == TRUE & frame.type == "black"){frame.cells <- which(values(in.raster[[1]])==0 & values(in.raster[[2]])==0 & values(in.raster[[3]])==0)}
     # NA frame
-    if(clip.frame == TRUE & frame.type == "na"){which(is.na(values(in.raster[[1]])))}
+    if(clip.frame == TRUE & frame.type == "na"){frame.cells <- which(is.na(values(in.raster[[1]])))}
     
     # Remove dark text, boundaries etc first by assigning values as NA (if that option is selected by the user) 
     if(dark.rm == TRUE){

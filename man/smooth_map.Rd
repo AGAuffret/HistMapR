@@ -2,7 +2,7 @@
 \alias{smooth_map}
 \title{Smooth an input map}
 \description{Smooths out inconsistencies in the map by performing a function on each pixel based on the values of surrounding pixels. Can also remove dark RGB values, typically used for map text, boundaries etc.}
-\usage{smooth_map(in.raster, window.size = 25, smooth.function = mean, dark.rm = TRUE, darkValue = 100, clip.frame = FALSE)}
+\usage{smooth_map(in.raster, window.size = 25, smooth.function = mean, dark.rm = TRUE, darkValue = 100, clip.frame = FALSE, frame.type = "black")}
 \arguments{
   \item{in.raster}{The SpatRaster object to be smoothed. This must be an RGB raster object, i.e. with three colour bands. Other types of raster may return an error, but can be converted e.g. in QGIS.}
   \item{window.size}{Integer. Default = 25. Must be odd. Passed to \code{\link[terra]{focal}} via \code{\link[base]{matrix}} to determine the size in pixels of the window (larger window = greater generalization). }
@@ -10,7 +10,7 @@
   \item{dark.rm}{Logical. Reduce the effect of map text, boundaries etc. by removing the darkest pixels prior to smoothing. Default is TRUE. }
   \item{darkValue}{Integer. Value below which all RGB layers should have for a pixel to be removed prior to smoothing. Default is 100. Too high values result in the appearance of large patches of white (NA) appear. Too low and text etc can interfere with land use categories. }
   \item{clip.frame}{Logical. Should the smoothed map be 'clipped' to remove areas of the input raster that are not mapped (for example because the image is not straight)? Default is FALSE, which can be useful for mosaicking maps later, while TRUE keeps the classification within the bounds of the input map.}
-    \item{frame.type}{Character. If clipping the frame, are the unmapped values 'black' (i.e. RGB values all zero (not always a very clean clip in these cases), or 'na'. Choosing incorrectly will just mean that the frame doesn't get clipped. Default is 'black'..}
+    \item{frame.type}{Character. If clipping the frame, are the unmapped values 'black' (i.e. RGB values all zero (not always a very clean clip in these cases), or 'na'. Choosing incorrectly will just mean that the frame doesn't get clipped. Default is 'black'.}
 
  }
 \details{
